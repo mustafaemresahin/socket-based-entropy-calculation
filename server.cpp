@@ -35,3 +35,8 @@ double calc_incremental_entropy(std::map<char, int> &freq, int &currFreq, double
     currH = H;
     return H;
 };
+
+// Middleman function to calculate entropy
+std::string middleman(std::string input) {
+    
+}
