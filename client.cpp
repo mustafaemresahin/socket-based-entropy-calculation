@@ -72,6 +72,16 @@ void *f(void *arg) {
         std::cerr << "ERROR reading from socket" << std::endl;
         exit(0);
     }
+    // Read the incoming message
+    char *tempBuffer = new char[msgSize + 1];
+    bzero(tempBuffer, msgSize + 1);
+    n = read(sockfd, tempBuffer, msgSize);
+    if (n < 0) {
+        std::cerr << "ERROR reading from socket" << std::endl;
+        exit(0);
+    }
+    buffer = tempBuffer;
+    delete[] tempBuffer;
     
     return 0;
 };
