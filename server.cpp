@@ -113,6 +113,13 @@ int main(int argc, char *argv[]) {
         }
         // Create a new process to handle the client request
         if (fork() == 0) {
+            int n, msgSize = 0;
+            // Read the message size from the client
+            n = read(newsockfd, &msgSize, sizeof(int));
+            if (n < 0) {
+                std::cerr << "Error reading from socket" << std::endl;
+                exit(0);
+            }
         }
     }
      
