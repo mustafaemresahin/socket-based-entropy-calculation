@@ -102,6 +102,8 @@ int main(int argc, char *argv[]) {
     // Listen for incoming connections
     listen(sockfd, 5);
     clilen = sizeof(cli_addr);
+    // Handle zombie processes
+    signal(SIGCHLD, fireman);
      
     return 0;
 }
