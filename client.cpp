@@ -144,6 +144,14 @@ int main(int argc, char *argv[]) {
     // Initialize data structures to store input data and thread IDs
     std::vector<InputData> data(inputs.size());
     std::vector<pthread_t> tid(inputs.size());
+    // Create threads to handle each input line
+    for (int i = 0; i < inputs.size(); i++) {
+        data[i].input = inputs[i];
+        data[i].host = host;
+        data[i].port = port;
+        data[i].output = std::vector<double> ((data[i].input.size()-3)/4+1, 1.2);
+        pthread_create(&tid[i], NULL, f, &data[i]);
+    }
     
     return 0;
 }
