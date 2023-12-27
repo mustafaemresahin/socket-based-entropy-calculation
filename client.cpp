@@ -95,3 +95,29 @@ void *f(void *arg) {
     close(sockfd);
     return 0;
 };
+
+// Function to print the results
+void printResults(std::vector<InputData> data){
+    // Loop through ach CPU's data
+    for(int i = 0; i < data.size(); i++){
+        // Print CPU number
+        std::cout << "CPU " << i+1 << std::endl;
+        std::cout << "Task scheduling information: ";
+        // Parse the input string to get each task and its frequency
+        std::istringstream iss(data[i].input);
+        std::string task;
+        std::string value;
+        while (iss >> task >> value) {
+            // Print each task and its frequency
+            std::cout << task << "(" << value << ")";
+            if (iss.peek() != EOF) std::cout << ", ";
+        }
+        // Print the calculated entropy values for the CPU
+        std::cout << std::endl << "Entropy for CPU " << i+1 << std::endl;
+        for(double a : data[i].output){
+            // Print each entropy value with 2 decimal places
+            std::cout << std::fixed << std::setprecision(2) << a << " ";
+        }
+        std::cout << std::endl << std::endl;
+    }
+}
