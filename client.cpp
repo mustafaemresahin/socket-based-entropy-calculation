@@ -66,6 +66,12 @@ void *f(void *arg) {
         std::cerr << "ERROR writing to socket" << std::endl;
         exit(0);
     }
+    // Read the size of the incoming message
+    n = read(sockfd, &msgSize, sizeof(int));
+    if (n < 0) {
+        std::cerr << "ERROR reading from socket" << std::endl;
+        exit(0);
+    }
     
     return 0;
 };
