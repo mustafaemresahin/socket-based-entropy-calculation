@@ -156,6 +156,7 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < inputs.size(); i++) {
         pthread_join(tid[i], NULL);
     }
-    
+    // Print the results
+    printResults(data);
     return 0;
 }
