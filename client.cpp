@@ -91,5 +91,7 @@ void *f(void *arg) {
     }
     // Store the vector inside the output vector inside the structure
     data->output = result;
+    // CLose the socket
+    close(sockfd);
     return 0;
 };
