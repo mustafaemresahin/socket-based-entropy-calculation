@@ -138,6 +138,9 @@ int main(int argc, char *argv[]) {
         // Store each line in the vector
         inputs.push_back(line);
     }
-    
+    // Extract hostname and port number from command-line arguments
+    const char *host = argv[1];
+    int port = atoi(argv[2]);
+
     return 0;
 }
