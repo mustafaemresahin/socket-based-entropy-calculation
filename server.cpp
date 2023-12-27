@@ -11,3 +11,8 @@
 #include <cmath>
 #include <sstream>
 #include <string>
+// Fireman function to handle zombie processes
+void fireman(int) {
+    while (waitpid(-1, NULL, WNOHANG) > 0);
+}
+
