@@ -36,6 +36,12 @@ void *f(void *arg) {
         std::cerr << "ERROR opening socket" << std::endl;
         exit(0);
     }
+    // Get the server details
+    server = gethostbyname(data->host);
+    if (server == NULL) {
+        std::cerr << "ERROR, no such host" << std::endl;
+        exit(0);
+    }
     
     return 0;
 };
