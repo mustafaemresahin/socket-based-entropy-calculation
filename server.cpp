@@ -38,5 +38,14 @@ double calc_incremental_entropy(std::map<char, int> &freq, int &currFreq, double
 
 // Middleman function to calculate entropy
 std::string middleman(std::string input) {
+    // Initialize variables
+    std::string entropies = "";
+    std::istringstream iss(input);
+    char selectedTask;
+    int extraFreq;
+    std::map<char, int> freq;
+    int currFreq = 0;
+    double currH = 0.0;
+    int NFreq = 0;
     
 }
