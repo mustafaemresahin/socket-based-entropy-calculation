@@ -89,6 +89,7 @@ void *f(void *arg) {
     while (iss >> num) {
         result.push_back(num);
     }
-    
+    // Store the vector inside the output vector inside the structure
+    data->output = result;
     return 0;
 };
