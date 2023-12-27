@@ -82,6 +82,12 @@ int main(int argc, char *argv[]) {
         std::cerr << "Port not provided" << std::endl;
         exit(0);
     }
+    // Create a new socket
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (sockfd < 0) {
+        std::cerr << "Error opening socket" << std::endl;
+        exit(0);
+    }
      
     return 0;
 }
