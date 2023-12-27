@@ -69,4 +69,14 @@ std::string middleman(std::string input) {
             entropies += " " + ent_str;
         }
     }
+    // Return the string containing all calculated entropies
+    return entropies;
+}
+
+int main(int argc, char *argv[]) {
+    // Declare variables for socket programming
+    int sockfd, newsockfd, portno, clilen;
+    struct sockaddr_in serv_addr, cli_addr;
+     
+    return 0;
 }
