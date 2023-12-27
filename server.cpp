@@ -47,5 +47,26 @@ std::string middleman(std::string input) {
     int currFreq = 0;
     double currH = 0.0;
     int NFreq = 0;
-    
+    // Loop through the input string to parse each task and its frequency
+    while (iss >> selectedTask >> extraFreq) {
+        // Initialize frequency for a new task to 0
+        if (freq.find(selectedTask) == freq.end()) {
+          freq[selectedTask] = 0;
+        }
+        // Calculate the entropy for the current task using the incremental entropy algorithm
+        double ent = calc_incremental_entropy(freq, currFreq, currH, selectedTask, extraFreq, NFreq);
+        // Update the frequency for the current task
+        freq[selectedTask] += extraFreq;
+        // Convert the calculated entropy from double to string
+        std::ostringstream oss;
+        oss << ent;
+        std::string ent_str = oss.str();
+        // Append the calculated entropy to the output string
+        if (entropies == "") {
+            entropies += ent_str + " ";
+        } 
+        else {
+            entropies += " " + ent_str;
+        }
+    }
 }
