@@ -121,3 +121,8 @@ void printResults(std::vector<InputData> data){
         std::cout << std::endl << std::endl;
     }
 }
+
+int main(int argc, char *argv[]) {
+    
+    return 0;
+}
