@@ -82,6 +82,13 @@ void *f(void *arg) {
     }
     buffer = tempBuffer;
     delete[] tempBuffer;
+    // Convert the string input to a vector of doubles
+    std::vector<double> result;
+    std::istringstream iss(buffer);
+    double num;
+    while (iss >> num) {
+        result.push_back(num);
+    }
     
     return 0;
 };
