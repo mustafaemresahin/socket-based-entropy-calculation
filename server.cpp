@@ -104,9 +104,6 @@ int main(int argc, char *argv[]) {
     clilen = sizeof(cli_addr);
     // Handle zombie processes
     signal(SIGCHLD, fireman);
-    // Main loop to accept new connections
-    while (true) {
-    }
      
     return 0;
 }
