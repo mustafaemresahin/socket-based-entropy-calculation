@@ -52,6 +52,14 @@ void *f(void *arg) {
         std::cerr << "ERROR connecting" << std::endl;
         exit(0);
     }
+    // Send the input data to the server
+    buffer = data->input;
+    int msgSize = buffer.size();
+    n = write(sockfd, &msgSize, sizeof(int));
+    if (n < 0) {
+        std::cerr << "ERROR writing to socket" << std::endl;
+        exit(0);
+    }
     
     return 0;
 };
