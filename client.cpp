@@ -24,6 +24,11 @@ struct InputData {
 void *f(void *arg) {
     // Cast the argument to the correct type
     InputData *data = (InputData *)arg;
+    // Initialize variables for socket communication
+    int sockfd, portno, n;
+    std::string buffer;
+    struct sockaddr_in serv_addr;
+    struct hostent *server;
     
     return 0;
 };
