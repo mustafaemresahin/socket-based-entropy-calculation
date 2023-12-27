@@ -106,6 +106,11 @@ int main(int argc, char *argv[]) {
     signal(SIGCHLD, fireman);
     // Main loop to accept new connections
     while (true) {
+        newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, (socklen_t *)&clilen);
+        if (newsockfd < 0) {
+            std::cerr << "Error accepting new connections" << std::endl;
+            exit(0);
+        }
     }
      
     return 0;
