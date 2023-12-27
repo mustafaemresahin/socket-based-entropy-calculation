@@ -120,6 +120,14 @@ int main(int argc, char *argv[]) {
                 std::cerr << "Error reading from socket" << std::endl;
                 exit(0);
             }
+            // Read the actual message from the client
+            char *tempBuffer = new char[msgSize + 1];
+            bzero(tempBuffer, msgSize + 1);
+            n = read(newsockfd, tempBuffer, msgSize);
+            if (n < 0) {
+                std::cerr << "Error reading from socket" << std::endl;
+                exit(0);
+            }
         }
     }
      
