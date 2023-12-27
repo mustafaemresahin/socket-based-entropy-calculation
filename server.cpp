@@ -99,6 +99,9 @@ int main(int argc, char *argv[]) {
         std::cerr << "Error binding" << std::endl;
         exit(0);
     }
+    // Listen for incoming connections
+    listen(sockfd, 5);
+    clilen = sizeof(cli_addr);
      
     return 0;
 }
