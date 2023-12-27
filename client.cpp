@@ -123,6 +123,11 @@ void printResults(std::vector<InputData> data){
 }
 
 int main(int argc, char *argv[]) {
+    // Check for correct number of arguments
+    if (argc != 3) {
+        std::cerr << "usage " << argv[0] << " hostname port" << std::endl;
+        exit(0);
+    }
     
     return 0;
 }
