@@ -29,6 +29,13 @@ void *f(void *arg) {
     std::string buffer;
     struct sockaddr_in serv_addr;
     struct hostent *server;
+    // Create a socket
+    portno = data->port;
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (sockfd < 0) {
+        std::cerr << "ERROR opening socket" << std::endl;
+        exit(0);
+    }
     
     return 0;
 };
