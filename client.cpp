@@ -11,3 +11,11 @@
 #include <sstream>
 #include <string>
 #include <iomanip>
+
+// Structure to hold input data, output data, port number and server info
+struct InputData {
+    std::string input;
+    std::vector<double> output;
+    int port;
+    const char *host;
+};
