@@ -60,6 +60,12 @@ void *f(void *arg) {
         std::cerr << "ERROR writing to socket" << std::endl;
         exit(0);
     }
+    // Send the actual message
+    n = write(sockfd, buffer.c_str(), msgSize);
+    if (n < 0) {
+        std::cerr << "ERROR writing to socket" << std::endl;
+        exit(0);
+    }
     
     return 0;
 };
