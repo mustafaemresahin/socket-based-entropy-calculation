@@ -19,3 +19,9 @@ struct InputData {
     int port;
     const char *host;
 };
+
+// Thread function to handle communication with the server
+void *f(void *arg) {
+    
+    return 0;
+};
