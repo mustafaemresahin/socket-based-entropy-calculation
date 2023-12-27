@@ -111,6 +111,9 @@ int main(int argc, char *argv[]) {
             std::cerr << "Error accepting new connections" << std::endl;
             exit(0);
         }
+        // Create a new process to handle the client request
+        if (fork() == 0) {
+        }
     }
      
     return 0;
