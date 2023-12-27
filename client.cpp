@@ -141,6 +141,9 @@ int main(int argc, char *argv[]) {
     // Extract hostname and port number from command-line arguments
     const char *host = argv[1];
     int port = atoi(argv[2]);
-
+    // Initialize data structures to store input data and thread IDs
+    std::vector<InputData> data(inputs.size());
+    std::vector<pthread_t> tid(inputs.size());
+    
     return 0;
 }
