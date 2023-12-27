@@ -77,6 +77,11 @@ int main(int argc, char *argv[]) {
     // Declare variables for socket programming
     int sockfd, newsockfd, portno, clilen;
     struct sockaddr_in serv_addr, cli_addr;
+    // Check for correct number of command-line arguments
+    if (argc != 2) {
+        std::cerr << "Port not provided" << std::endl;
+        exit(0);
+    }
      
     return 0;
 }
