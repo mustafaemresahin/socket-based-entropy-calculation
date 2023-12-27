@@ -42,6 +42,11 @@ void *f(void *arg) {
         std::cerr << "ERROR, no such host" << std::endl;
         exit(0);
     }
+    // Set up the server address structure
+    bzero((char *)&serv_addr, sizeof(serv_addr));
+    serv_addr.sin_family = AF_INET;
+    bcopy((char *)server->h_addr, (char *)&serv_addr.sin_addr.s_addr, server->h_length);
+    serv_addr.sin_port = htons(portno);
     
     return 0;
 };
