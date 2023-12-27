@@ -152,6 +152,10 @@ int main(int argc, char *argv[]) {
         data[i].output = std::vector<double> ((data[i].input.size()-3)/4+1, 1.2);
         pthread_create(&tid[i], NULL, f, &data[i]);
     }
+    // Wait for all threads to complete
+    for (int i = 0; i < inputs.size(); i++) {
+        pthread_join(tid[i], NULL);
+    }
     
     return 0;
 }
