@@ -128,6 +128,16 @@ int main(int argc, char *argv[]) {
         std::cerr << "usage " << argv[0] << " hostname port" << std::endl;
         exit(0);
     }
+    std::vector<std::string> inputs;
+    std::string line;
+    // Read lines from standard input to get task scheduling information
+    while (std::getline(std::cin, line)) {
+        if (line.empty()) {
+            break; // Exit the loop if an empty line is encountered
+        }
+        // Store each line in the vector
+        inputs.push_back(line);
+    }
     
     return 0;
 }
