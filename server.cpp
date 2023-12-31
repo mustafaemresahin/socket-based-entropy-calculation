@@ -132,7 +132,18 @@ int main(int argc, char *argv[]) {
             std::string buffer = tempBuffer;
             delete[] tempBuffer;
             buffer = middleman(buffer);
-            
+            // Send the processed message back to the client
+            msgSize = buffer.size();
+            n = write(newsockfd, &msgSize, sizeof(int));
+            if (n < 0) {
+                std::cerr << "Error writing to socket" << std::endl;
+                exit(0);
+            }
+            n = write(newsockfd, buffer.c_str(), msgSize);
+            if (n < 0) {
+                std::cerr << "Error writing to socket" << std::endl;
+                exit(0);
+            }
         }
     }
     // Close the sockets
