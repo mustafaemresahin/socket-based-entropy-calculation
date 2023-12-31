@@ -144,6 +144,8 @@ int main(int argc, char *argv[]) {
                 std::cerr << "Error writing to socket" << std::endl;
                 exit(0);
             }
+            // Exit the child process
+            _exit(0);
         }
     }
     // Close the sockets
