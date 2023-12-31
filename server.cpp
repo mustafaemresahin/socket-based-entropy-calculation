@@ -128,8 +128,13 @@ int main(int argc, char *argv[]) {
                 std::cerr << "Error reading from socket" << std::endl;
                 exit(0);
             }
+            // Process the client's message
+            std::string buffer = tempBuffer;
+            delete[] tempBuffer;
+            buffer = middleman(buffer);
+            
         }
     }
-     
+    
     return 0;
 }
