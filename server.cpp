@@ -135,6 +135,10 @@ int main(int argc, char *argv[]) {
             
         }
     }
-    
+    // Close the sockets
+    close(newsockfd);
+    close(sockfd);
+
+     
     return 0;
 }
