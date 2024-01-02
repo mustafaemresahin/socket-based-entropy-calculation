@@ -34,3 +34,9 @@ g++ -o server server.cpp
 ```bash
 g++ -pthread -o client client.cpp
 ```
+
+2. Run the client with the server's hostname and port number:
+
+```bash
+./client [hostname] [port_no] < input_filename
+```
