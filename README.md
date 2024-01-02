@@ -26,3 +26,11 @@ g++ -o server server.cpp
 ```bash
 ./server [port_no]
 ```
+
+
+### Client Program
+1. Compile the client program:
+
+```bash
+g++ -pthread -o client client.cpp
+```
