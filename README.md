@@ -20,3 +20,9 @@ The goal is to demonstrate the use of sockets for interprocess communication in 
 ```bash
 g++ -o server server.cpp
 ```
+
+2. Run the server specifying a port number:
+
+```bash
+./server [port_no]
+```
