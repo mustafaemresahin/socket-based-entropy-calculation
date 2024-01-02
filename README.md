@@ -56,3 +56,16 @@ B 3 A 3 C 3 A 1 B 1 C 1
 ## Output
 Both client and server programs perform their tasks silently without STDOUT output. The client program, after processing, displays the entropy values for each CPU.
 
+Example Output:
+
+```bash
+CPU 1
+Task scheduling information: A(2), B(4), C(3), A(7)
+Entropy for CPU 1
+0.00 0.92 1.53 1.42
+
+CPU 2
+Task scheduling information: B(3), A(3), C(3), A(1), B(1), C(1)
+Entropy for CPU 2
+0.00 1.00 1.58 1.57 1.57 1.58
+```
