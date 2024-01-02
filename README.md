@@ -43,3 +43,11 @@ g++ -pthread -o client client.cpp
 
 ## Input Format
 The client program expects input through a file, redirected as standard input. Each line represents the scheduling information of a CPU.
+
+
+Example:
+
+```bash
+A 2 B 4 C 3 A 7
+B 3 A 3 C 3 A 1 B 1 C 1
+```
