@@ -69,3 +69,7 @@ Task scheduling information: B(3), A(3), C(3), A(1), B(1), C(1)
 Entropy for CPU 2
 0.00 1.00 1.58 1.57 1.57 1.58
 ```
+
+## Dependencies
+- g++ compiler with support for C++11 or later.
+- UNIX environment for sockets and POSIX threads.
