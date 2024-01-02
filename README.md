@@ -10,3 +10,13 @@ The goal is to demonstrate the use of sockets for interprocess communication in 
 - **Client-Server Architecture**: Utilizes socket programming for communication between client and server.
 - **Multithreading and Multiprocessing**: Employs POSIX threads in the client and multiple processes (fork) in the server for handling concurrent requests.
 - **Incremental Entropy Calculation**: Implements the algorithm for entropy calculation in a distributed environment.
+
+
+## How to Run
+
+### Server Program
+1. Compile the server program:
+
+```bash
+g++ -o server server.cpp
+```
