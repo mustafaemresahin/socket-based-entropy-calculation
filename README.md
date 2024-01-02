@@ -51,3 +51,8 @@ Example:
 A 2 B 4 C 3 A 7
 B 3 A 3 C 3 A 1 B 1 C 1
 ```
+
+
+## Output
+Both client and server programs perform their tasks silently without STDOUT output. The client program, after processing, displays the entropy values for each CPU.
+
