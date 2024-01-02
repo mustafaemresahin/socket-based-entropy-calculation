@@ -26,20 +26,24 @@ g++ -o server server.cpp
 ```bash
 ./server [port_no]
 ```
-
+> Example: ./server 1234
 
 ### Client Program
 1. Compile the client program:
 
 ```bash
-g++ -pthread -o client client.cpp
+g++ -o client client.cpp
 ```
 
 2. Run the client with the server's hostname and port number:
 
+> Use *localhost* as hostname if you are running the client on the same device as the server
+
 ```bash
 ./client [hostname] [port_no]
 ```
+
+> Example: ./client localhost 1234
 
 ## Input Format
 The client program expects input through a file, redirected as standard input. Each line represents the scheduling information of a CPU.
