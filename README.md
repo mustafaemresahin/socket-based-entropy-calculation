@@ -40,3 +40,6 @@ g++ -pthread -o client client.cpp
 ```bash
 ./client [hostname] [port_no] < input_filename
 ```
+
+## Input Format
+The client program expects input through a file, redirected as standard input. Each line represents the scheduling information of a CPU.
