@@ -14,6 +14,18 @@ The goal is to demonstrate the use of sockets for interprocess communication in 
 
 ## How to Run
 
+### Clone the repository
+
+```bash
+git clone https://github.com/mustafaemresahin/socket-based-entropy-calculation.git
+```
+
+Then navigate to the repository
+
+```bash
+cd socket-based-entropy-calculation
+```
+
 ### Server Program
 1. Compile the server program:
 
