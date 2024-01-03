@@ -26,6 +26,8 @@ Then navigate to the repository
 cd socket-based-entropy-calculation
 ```
 
+> Make sure you run the server first and run the client while server is running!
+
 ### Server Program
 1. Compile the server program:
 
