@@ -40,7 +40,7 @@ g++ -o server server.cpp
 ```bash
 ./server [port_no]
 ```
-> **Example:** ./server 1234
+`Example:` ./server 1234
 
 ### Client Program
 1. Compile the client program:
@@ -57,7 +57,7 @@ g++ -o client client.cpp
 ./client [hostname] [port_no]
 ```
 
-> **Example:** ./client localhost 1234
+`Example:` ./client localhost 1234
 
 
 
